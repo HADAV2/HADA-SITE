@@ -1,0 +1,259 @@
+</html>
+<style>
+html, body {
+	margin:0;
+	user-select: none;
+	font-family: "メイリオ", Meiryo, sans-serif;
+	font-size: 150%;
+	overflow-x: hidden;
+line-height: 0px;
+position: relative;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+p, div{
+display: inline-block;
+_display: inline;
+}
+.progress {
+	width: 100%;
+	height: 100%;
+}
+.year {
+	top: 0px;
+	height: calc(100% / 6) ;
+	background: #E8E8E8;
+	width: 100%;
+}
+.yearprogress {
+	width: 12 ;
+	height: 100%;
+	top: 0;
+	right: 0;
+	text-align:right;
+	white-space: nowrap;
+background: #66ADFF;
+}
+.month {
+	top: 0px;
+	height: calc(100% / 6) ;
+	background: #E8E8E8;
+	width: 100%;
+}
+.monthprogress {
+	width: 12 ;
+	height: 100%;
+	top: 0;
+	right: 0;
+	text-align:right;
+	white-space: nowrap;
+background: #F7C147;
+}
+.day {
+	top: 0px;
+	height: calc(100% / 6) ;
+	background: #E8E8E8;
+	width: 100%;
+}
+.dayprogress {
+	width: 12 ;
+	height: 100%;
+	top: 0;
+	right: 0;
+	text-align:right;
+	white-space: nowrap;
+background: #DAB1F9;
+}
+.hour {
+	top: 0px;
+	height: calc(100% / 6) ;
+	background: #E8E8E8;
+	width: 100%;
+}
+.hourprogress {
+	width: 12 ;
+	height: 100%;
+	position: ;
+	top: 0;
+	right: 0;
+	text-align:right;
+	white-space: nowrap;
+background: #00FF00;
+}
+.minute {
+	top: 0px;
+	height: calc(100% / 6) ;
+	background: #E8E8E8;
+	width: 100%;
+}
+.minuteprogress {
+	width: 12 ;
+	height: 100%;
+	position: ;
+	top: 0;
+	right: 0;
+	text-align:right;
+	white-space: nowrap;
+background: #F9F2B3;
+}
+.second {
+	top: 0px;
+	height: calc(100% / 6) ;
+	background: #E8E8E8;
+	width: 100%;
+}
+.secondprogress {
+	width: 1%;
+	height: 100%;
+	background: Blue;
+	top: 0;
+	right: 0;
+	text-align:right;
+	white-space: nowrap;
+background: #FA6964;
+}
+</style>
+<head>
+	<meta charset="UTF-8">
+	<title>timeprogress</title>
+</head>
+<body oncontextmenu="return false;">
+<p id = "time" style="text-align: left;"></p>
+<div align="right">
+		<select id="timezone">
+			<option value="auto">Auto</option>
+			<option value="-12:00">UTC-12</option>
+			<option value="-11:00">UTC-11</option>
+			<option value="-10:00">UTC-10</option>
+			<option value="-09:30">UTC-9:30</option>
+			<option value="-09:00">UTC-9</option>
+			<option value="-08:30">UTC-8:30</option>
+			<option value="-08:00">UTC-8</option>
+			<option value="-07:00">UTC-7</option>
+			<option value="-06:00">UTC-6</option>
+			<option value="-05:00">UTC-5</option>
+			<option value="-04:00">UTC-4</option>
+			<option value="-03:30">UTC-3:30</option>
+			<option value="-03:00">UTC-3</option>
+			<option value="-02:30">UTC-2:30</option>
+			<option value="-02:00">UTC-2</option>
+			<option value="-01:00">UTC-1</option>
+			<option value="00:00">UTC</option>
+			<option value="+01:00">UTC+1</option>
+			<option value="+02:00">UTC+2</option>
+			<option value="+03:00">UTC+3</option>
+			<option value="+03:30">UTC+3:30</option>
+			<option value="+04:00">UTC+4</option>
+			<option value="+04:30">UTC+4:30</option>
+			<option value="+05:00">UTC+5</option>
+			<option value="+05:00">UTC+5:30</option>
+			<option value="+05:45">UTC+5:45</option>
+			<option value="+06:00">UTC+6</option>
+			<option value="+06:30">UTC+6:30</option>
+			<option value="+07:00">UTC+7</option>
+			<option value="+08:00">UTC+8</option>
+			<option value="+09:00">UTC+9</option>
+			<option value="+09:30">UTC+9:30</option>
+			<option value="+10:00">UTC+10</option>
+			<option value="+10:30">UTC+10:30</option>
+			<option value="+11:00">UTC+11</option>
+			<option value="+11:30">UTC+11:30</option>
+			<option value="+12:00">UTC+12</option>
+			<option value="+12:45">UTC+12:45</option>
+			<option value="+13:00">UTC+13</option>
+			<option value="+13:45">UTC+13:45</option>
+			<option value="+14:00">UTC+14</option>
+		</select>
+		<select id="format">
+			<option value="12">12-Hour Time</option>
+			<option value="24" selected>24-Hour Time</option>
+		</select>
+</div>
+	<div class="progress">
+			<div class="year"><div class="yearprogress"><p id="year"></p></div></div>
+			<div class="month"><div class="monthprogress"><p id="month"></p></div></div>
+			<div class="day"><div class="dayprogress"> <p id="day"></p> </div></div>
+			<div class="hour"><div class="hourprogress"> <p id="hour"></p> </div></div>
+			<div class="minute"><div class="minuteprogress"> <p id="minute"></p> </div></div>
+			<div class="second"><div class="secondprogress"> <p id="second"></p></div></div>
+		</div>
+	<script type="text/javascript">
+		window.onload = function(){
+			setInterval('updater()',1);
+		}
+		function updater() {
+			var unix = Date.now();
+var timezone = document.getElementById("timezone").value;
+if(timezone == "auto"){
+var auto = (new Date()).getTimezoneOffset();
+unix = unix + (auto * -60000);
+var time = new Date(unix);
+}else{
+var a = 60000;
+if(timezone.split(":")[0] < 0){
+a = -60000;
+}
+unix = unix + ((timezone.split(":")[0] * 3600000) + (timezone.split(":")[1] * a));
+var time = new Date(unix);
+}
+month = time.getUTCMonth();
+			if(month < 10){
+				month = "0" + month;
+			}
+			var day = time.getUTCDate();
+			if(day < 10){
+				day = "0" + day;
+			}
+			var hour = time.getUTCHours();
+			if(hour < 10){
+				hour = "0" + hour;
+			}
+			var hourstart = Date.parse(time.getUTCFullYear() + "-" + (month + 1 ) + "-" + day + "T" + hour + ":00:00Z");
+			var daystart = Date.parse(time.getUTCFullYear() + "-" + (month + 1 ) + "-" + day + "T00:00:00Z");
+			var monthstart = Date.parse(time.getUTCFullYear() + "-" + (month + 1 ) + "-01" + "T00:00:00Z");
+			var nextmonth = time.getUTCMonth() + 2;
+			var year = time.getUTCFullYear();
+			if(nextmonth > 12){
+				nextmonth = nextmonth - 12;
+				year = year + 1;
+			}
+			if(nextmonth < 10){
+				nextmonth = "0" + nextmonth;
+			}
+var hour2 = time.getUTCHours();
+if(document.getElementById("format").value == "12" ){
+var ampm = "AM";
+if(time.getUTCHours() >= 12){
+ampm = "PM";
+}
+hour2 = time.getUTCHours()%12 + " " + ampm;
+}
+			var monthend = Date.parse(year + "-" + nextmonth + "-01T00:00:00Z");
+			var yearstart = Date.parse(time.getUTCFullYear() + "-01-01T00:00:00Z");
+			var yearend = Date.parse((time.getUTCFullYear() + 1) + "-01-01T00:00:00Z");
+			document.getElementsByClassName("secondprogress")[0].style.width = unix%1000/1000*100+"%";
+			document.getElementById("second").innerHTML = time.getSeconds() + " ("+Math.round(unix%1000/1000*10000)/100+"%)";
+			document.getElementsByClassName("minuteprogress")[0].style.width = unix%60000/60000*100+"%";
+			document.getElementById("minute").innerHTML = time.getUTCMinutes()+ " ("+Math.round(unix%60000/60000*10000)/100+"%)";
+			document.getElementById("hour").innerHTML = hour2 + " ("+Math.round((unix-hourstart)/ 3600000*10000)/100+"%)";
+			document.getElementsByClassName("hourprogress")[0].style.width = (unix-hourstart)/3600000*100 + "%";
+			document.getElementById("day").innerHTML = time.getUTCDate() + " ("+Math.round((unix-daystart)/86400000*100000)/1000+"%)";
+			document.getElementsByClassName("dayprogress")[0].style.width = (unix-daystart)/86400000*100 +"%";
+			document.getElementById("month").innerHTML = (time.getUTCMonth()+1) + " ("+Math.round((unix-monthstart)/(monthend - monthstart)*1000000)/10000+"%)";
+			document.getElementsByClassName("monthprogress")[0].style.width = ((unix-monthstart)/(monthend - monthstart)*100) + "%";
+			document.getElementById("year").innerHTML = time.getUTCFullYear() + " ("+ Math.round((unix-yearstart)/(yearend - yearstart)*100000000) /1000000 +"%)";
+			document.getElementsByClassName("yearprogress")[0].style.width = ((unix-yearstart)/(yearend - yearstart)*100) + "%";
+			var minute = time.getUTCMinutes();
+			if(minute < 10){
+				minute = "0" + minute;
+			}
+			var second = time.getUTCSeconds();
+			if(second < 10){
+				second = "0" + second;
+			}
+			document.getElementById("time").innerHTML = time.getUTCFullYear() + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+};
+</script>
+</body>
+</html>
