@@ -3,6 +3,7 @@
 html, body {
   font-family: "メイリオ", Meiryo, sans-serif;
   margin:0;
+  text-align: center;
 }
 div{
   display: inline-block;
@@ -37,15 +38,20 @@ a {
   vertical-align:middle;
   line-height: 50px;
   color: #505050;
-  width: 100%;
+  width: 95%;
   height: 50px;
+  text-align: left;
+  padding-left: 5%
 }
 .header2{
-  padding: 10px;
+
+  padding-left: 5%;
+  text-align: left;
+  padding-top: 0px;
   margin:0;
   background: #FF6900;
   color: #F5EAB2;
-  width: 100%;
+  width: 95%;
   height: 200px;
   font-size:200%;
 }
@@ -59,7 +65,7 @@ a {
   padding: 20px;
   top:10px;
   margin:10px;
-  width: 450px;
+  width: 500px;
   height: 300px;
   border: solid 1px blue;
   position relative;
@@ -95,9 +101,13 @@ a {
   height: 100%;
   background: rgba(255,255,255,0.9);
 }
+.main {
+  margin:0 auto;
+  text-align: left;
+}
 .profile{
   font-weight: bold;
-  width: 450px;
+  width: 500px;
   float: right;
 }
 .faq{
@@ -106,7 +116,7 @@ a {
   border: red;
   border-radius: 20px 20px 20px 20px;
   font-weight: bold;
-  width: 450px;
+  width: 500px;
   clear:both;
   float: left;
   border-style: dashed;
@@ -153,47 +163,42 @@ a {
 }
 .account{
   font-weight: bold;
-  width: 450px;
+  width: 500px;
   float: right;
 }
 </style>
 <head>
-  <title>HADAの公式ウェブサイト</title>
+  <title>HADAの公式サイト</title>
   <meta charset="UTF-8">
-  <meta name="description" content="マインクラフトプレイヤーHADA(MCID: NOOB_Japan)の公式ウェブサイトです。">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@TvHada" />
-  <meta property="og:url" content="https://hadadayo.tk/" />
-  <meta property="og:title" content="HADAの公式ウェブサイト" />
-  <meta property="og:description" content="マインクラフトプレイヤーHADA(MCID: NOOB_Japan)の公式ウェブサイトです。" />
-  <meta property="og:image" content="https://hadadayo.tk/image/head.svg" />
 </head>
 <body>
   <div class="bg-image">
     <div class="bg-mask">
-      <div class="header">わざわざ見てくれてありがとう！HADAの公式ホームページ💨</div>
-      <div class="header2"><p><p id="bigname">NOOB_JAPAN</p>&nbsp;便利な要約サイトが作りかけOPEN</p></div>
-      <div class="youtube"><div class="balloon">HADAのオススメ動画🐾</div>
-      <iframe width="427" height="240" src="https://www.youtube.com/embed/zbfXvUE-Ldw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="profile">
-      ＊＋＊＋＊＋＊＋＊＋🌪自己紹介💨＋＊＋＊＋＊＋＊＋＊<br>
-      HADAだぜ☆(ゝω・)vｷｬﾋﾟ<br>
-      ＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊
-    </div>
-    <div class="faq">
-      よくありそうなQ&A!<br>
-      <div class="q">好きなYouTuberは誰ですか</div>
-      <br>
-      <div class="a">ぽてち064です</div>
-    </div>
-    <div class="account">
-      *YouTubeチャンネルはこちら<br>
-      <script src="https://apis.google.com/js/platform.js"></script>
-      <div class="g-ytsubscribe" data-channelid="UCmbAQXOgic5zKs4-_YN-fgQ" data-layout="full" data-count="default"></div>
-      <br>
-      *Twitterはこちら<br>
-      <a href="https://twitter.com/TvHada?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Tv_Hada</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="header">わざわざ見てくれてありがとう！HADAの公式ホームページ💨</div>
+      <div class="header2"><div id="bigname">NOOB_JAPAN</div><br>&nbsp;便利な要約サイトが作りかけOPEN</div>
+      <div class="main">
+        <div class="youtube"><div class="balloon">HADAのオススメ動画🐾</div>
+        <iframe width="427" height="240" src="https://www.youtube.com/embed/zbfXvUE-Ldw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="profile">
+        ＊＋＊＋＊＋＊＋＊＋🌪自己紹介💨＋＊＋＊＋＊＋＊＋＊<br>
+        HADAだぜ☆(ゝω・)vｷｬﾋﾟ<br>
+        ＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊＋＊
+      </div>
+      <div class="faq">
+        よくありそうなQ&A!<br>
+        <div class="q">好きなYouTuberは誰ですか</div>
+        <br>
+        <div class="a">ぽてち064です</div>
+      </div>
+      <div class="account">
+        *YouTubeチャンネルはこちら<br>
+        <script src="https://apis.google.com/js/platform.js"></script>
+        <div class="g-ytsubscribe" data-channelid="UCmbAQXOgic5zKs4-_YN-fgQ" data-layout="full" data-count="default"></div>
+        <br>
+        *Twitterはこちら<br>
+        <a href="https://twitter.com/Tv_Hada?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Tv_Hada</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
     </div>
   </div>
 </div>
