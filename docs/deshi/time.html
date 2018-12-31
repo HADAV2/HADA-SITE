@@ -204,7 +204,7 @@ a = -60000;
 unix = unix + ((timezone.split(":")[0] * 3600000) + (timezone.split(":")[1] * a));
 var time = new Date(unix);
 }
-month = time.getUTCMonth();
+month = time.getUTCMonth() + 1;
 			if(month < 10){
 				month = "0" + month;
 			}
