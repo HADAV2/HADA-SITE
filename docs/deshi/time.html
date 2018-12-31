@@ -216,9 +216,9 @@ month = time.getUTCMonth() + 1;
 			if(hour < 10){
 				hour = "0" + hour;
 			}
-			var hourstart = Date.parse(time.getUTCFullYear() + "-" + (month + 1 ) + "-" + day + "T" + hour + ":00:00Z");
-			var daystart = Date.parse(time.getUTCFullYear() + "-" + (month + 1 ) + "-" + day + "T00:00:00Z");
-			var monthstart = Date.parse(time.getUTCFullYear() + "-" + (month + 1 ) + "-01" + "T00:00:00Z");
+			var hourstart = Date.parse(time.getUTCFullYear() + "-" + month + "-" + day + "T" + hour + ":00:00Z");
+			var daystart = Date.parse(time.getUTCFullYear() + "-" + month  + "-" + day + "T00:00:00Z");
+			var monthstart = Date.parse(time.getUTCFullYear() + "-" + month + "-01" + "T00:00:00Z");
 			var nextmonth = time.getUTCMonth() + 2;
 			var year = time.getUTCFullYear();
 			if(nextmonth > 12){
