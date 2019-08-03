@@ -1,6 +1,18 @@
 </html>
 <style>
+@media (prefers-color-scheme: light) {
+  --theme-base: white;
+  --theme-font: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  --theme-base: black;
+  --theme-font: white;
+}
+
 html, body {
+        background-color: var(--them-base);
+        color: var(--them-font);
 	margin:0;
 	user-select: none;
 	font-family: "メイリオ", Meiryo, sans-serif;
@@ -124,6 +136,7 @@ background: #FA6964;
   <meta property="og:title" content="Time Progress" />
   <meta property="og:description" content="Year, Month, Day, Hours, Minutes, Seconds Progress" />
   <meta property="og:image" content="https://hadadayo.tk/deshi/image/diahada.jpg" />
+	<meta name="theme-color" content="#000000">
 </head>
 <body oncontextmenu="return false;">
 <p id = "time" style="text-align: left;"></p>
