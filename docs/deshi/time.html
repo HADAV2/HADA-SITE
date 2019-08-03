@@ -3,11 +3,13 @@
 @media (prefers-color-scheme: light) {
   --theme-base: white;
   --theme-font: black;
+  --progress-background: #E8E8E8;
 }
 
 @media (prefers-color-scheme: dark) {
   --theme-base: black;
   --theme-font: white;
+  --progress-background: #3C3D3D;
 }
 
 html, body {
@@ -35,7 +37,7 @@ _display: inline;
 .year {
 	top: 0px;
 	height: calc(100% / 6) ;
-	background: #E8E8E8;
+	background: var(--progress-background);
 	width: 100%;
 }
 .yearprogress {
@@ -50,7 +52,7 @@ background: #66ADFF;
 .month {
 	top: 0px;
 	height: calc(100% / 6) ;
-	background: #E8E8E8;
+	background: var(--progress-background);
 	width: 100%;
 }
 .monthprogress {
@@ -65,7 +67,7 @@ background: #F7C147;
 .day {
 	top: 0px;
 	height: calc(100% / 6) ;
-	background: #E8E8E8;
+	background: var(--progress-background);
 	width: 100%;
 }
 .dayprogress {
@@ -80,7 +82,7 @@ background: #DAB1F9;
 .hour {
 	top: 0px;
 	height: calc(100% / 6) ;
-	background: #E8E8E8;
+	background: var(--progress-background);
 	width: 100%;
 }
 .hourprogress {
@@ -96,7 +98,7 @@ background: #00FF00;
 .minute {
 	top: 0px;
 	height: calc(100% / 6) ;
-	background: #E8E8E8;
+	background: var(--progress-background);
 	width: 100%;
 }
 .minuteprogress {
@@ -112,7 +114,7 @@ background: #F9F2B3;
 .second {
 	top: 0px;
 	height: calc(100% / 6) ;
-	background: #E8E8E8;
+	background: var(--progress-background);
 	width: 100%;
 }
 .secondprogress {
